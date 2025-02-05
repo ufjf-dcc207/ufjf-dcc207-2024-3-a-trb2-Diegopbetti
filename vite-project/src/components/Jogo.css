@@ -14,6 +14,7 @@
 
 .jogo {
     background-color: white;
+    border-radius: 10px;
     max-width: 300px;
     width: 100%;
     max-height: 335px;
