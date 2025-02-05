@@ -1,5 +1,6 @@
 import './Jogo.css'
 import Palavra from './Palavra'
+import Teclas from './Teclas'
 
 function Jogo(){
 
@@ -9,7 +10,9 @@ function Jogo(){
             <div className='jogo'>
                 <Palavra />
             </div>
-            <div className='teclado'></div>
+            <div className='teclado'>
+                <Teclas />
+            </div>
         </div>
     )
 }
