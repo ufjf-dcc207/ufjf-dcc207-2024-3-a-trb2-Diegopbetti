@@ -1,0 +1,15 @@
+.container {
+    color: white;
+    width: 400px;
+    height: 600px;
+    text-align: center;
+}
+
+.subcontainer {
+    background-color: white;
+    max-width: 400px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    margin-top: 60px;
+}
