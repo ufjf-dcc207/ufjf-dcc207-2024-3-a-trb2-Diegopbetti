@@ -4,10 +4,9 @@ function Jogo(){
 
     return (
         <div className='container'>
-            <h1>Termo</h1>
-            <div className='subcontainer'>
-                
-            </div>
+            <h1 className='titulo'>Termo</h1>
+            <div className='jogo'></div>
+            <div className='teclado'></div>
         </div>
     )
 }
