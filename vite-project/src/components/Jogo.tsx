@@ -48,7 +48,7 @@ function Jogo() {
         ))}
       </div>
       <div className='teclado'>
-        <Teclas />
+        <Teclas onKeyPress={handleKeyPress}/>
       </div>
     </div>
   );
