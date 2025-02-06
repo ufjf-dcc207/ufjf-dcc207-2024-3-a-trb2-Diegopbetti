@@ -16,6 +16,20 @@ const handleKeyPress = (key: string) => {
     if (key === 'BACKSPACE' || key === 'ESCAPE' || key === '🔙') {
       setCurrentGuess((prev) => prev.slice(0, -1));
     } 
+    else if (key === 'ENTER' || key === '☑️') {
+        if (currentGuess.length === WORD_LENGTH) {
+          setGuesses((prev) => {
+            const newGuesses = [...prev];
+            newGuesses[currentRow] = currentGuess;
+            return newGuesses;
+          });
+          setCurrentGuess('');
+          setCurrentRow((prev) => Math.min(prev + 1, MAX_ATTEMPTS - 1));
+        }
+      } 
+      else if (/^[A-Z]$/.test(key) && currentGuess.length < WORD_LENGTH) {
+        setCurrentGuess((prev) => prev + key);
+      }
   };
   
 
