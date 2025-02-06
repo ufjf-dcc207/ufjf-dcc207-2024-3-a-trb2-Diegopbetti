@@ -1,45 +1,15 @@
-import './Palavra.css'
+import './Palavra.css';
 
-export default function(){
-    return (
-        <div className='linha'>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-           
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-           
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-            
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-           
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-           
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-                <div className='letra'></div>
-            
-        </div>
-        
-    )
+interface PalavraProps {
+  word: string;
+}
+
+export default function Palavra({ word }: PalavraProps) {
+  return (
+    <div className='linha'>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <div className='letra' key={i}>{word[i] || ''}</div>
+      ))}
+    </div>
+  );
 }

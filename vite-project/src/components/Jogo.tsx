@@ -45,15 +45,18 @@ function Jogo(){
 
     return (
         <div className='container'>
-            <h1 className='titulo'>Termo</h1>
-            <div className='jogo'>
-                <Palavra />
-            </div>
-            <div className='teclado'>
-                <Teclas />
-            </div>
+          <h1 className='titulo'>Termo</h1>
+          <div className='jogo'>
+            {guesses.map((guess, index) => (
+              <Palavra key={index} word={index === currentRow ? currentGuess : guess} />
+            ))}
+          </div>
+          <div className='teclado'>
+            <Teclas />
+          </div>
         </div>
-    )
+      );
+      
 }
 
 export default Jogo
