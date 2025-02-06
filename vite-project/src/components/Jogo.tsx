@@ -31,7 +31,15 @@ const handleKeyPress = (key: string) => {
         setCurrentGuess((prev) => prev + key);
       }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      handleKeyPress(event.key);
+    };
   
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentGuess, currentRow]);  
 
 function Jogo(){
 
