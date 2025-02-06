@@ -10,6 +10,15 @@ const [guesses, setGuesses] = useState<string[]>(Array(MAX_ATTEMPTS).fill(''));
 const [currentGuess, setCurrentGuess] = useState('');
 const [currentRow, setCurrentRow] = useState(0);
 
+const handleKeyPress = (key: string) => {
+    key = key.toUpperCase(); // Converte para maiúsculo
+  
+    if (key === 'BACKSPACE' || key === 'ESCAPE' || key === '🔙') {
+      setCurrentGuess((prev) => prev.slice(0, -1));
+    } 
+  };
+  
+
 function Jogo(){
 
     return (
