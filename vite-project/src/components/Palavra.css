@@ -4,7 +4,7 @@
     gap: 5px;
     margin-top: 5px;
     justify-content: center;
-    height: 64px;
+    height: 46px;
     width: 100%;
 }
 
@@ -17,4 +17,16 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
+}
+
+.letra.correta {
+    background-color: green;
+}
+  
+.letra.parcial {
+   background-color: yellow;
+}
+  
+.letra.errada {
+    background-color: red;
 }
