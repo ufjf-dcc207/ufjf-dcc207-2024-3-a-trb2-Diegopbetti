@@ -1,4 +1,4 @@
-import './Palavra.css';
+import "./Palavra.css";
 
 interface PalavraProps {
   word: string;
@@ -8,22 +8,22 @@ interface PalavraProps {
 
 export default function Palavra({ word, secretWord, revealed }: PalavraProps) {
   const getLetterStyle = (letter: string, index: number) => {
-    if (!revealed) return 'letra';
+    if (!revealed) return "letra";
 
     if (letter === secretWord[index]) {
-      return 'letra correta';
+      return "letra correta";
     } else if (secretWord.includes(letter)) {
-      return 'letra parcial'; 
+      return "letra parcial";
     } else {
-      return 'letra errada';
+      return "letra errada";
     }
   };
 
   return (
-    <div className='linha'>
+    <div className="linha">
       {Array.from({ length: 5 }).map((_, i) => (
-        <div className={getLetterStyle(word[i] || '', i)} key={i}>
-          {word[i] || ''}
+        <div className={getLetterStyle(word[i] || "", i)} key={i}>
+          {word[i] || ""}
         </div>
       ))}
     </div>
