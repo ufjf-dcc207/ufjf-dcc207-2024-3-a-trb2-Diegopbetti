@@ -65,7 +65,10 @@ function Jogo({ palavraSecreta }: JogoProps) {
       <h1 className='titulo'>Termo</h1>
       <div className='jogo'>
         {guesses.map((guess, index) => (
-          <Palavra key={index} word={index === currentRow ? currentGuess : guess} />
+          <Palavra key={index} word={index === currentRow ? currentGuess : guess} 
+            secretWord={palavraSecreta} 
+            revealed={confirmedGuesses[index]} 
+          />
         ))}
       </div>
       <div className='teclado'>

@@ -18,3 +18,15 @@
     align-items: center;
     font-size: 30px;
 }
+
+.letra.correta {
+    background-color: green;
+}
+  
+.letra.parcial {
+   background-color: yellow;
+}
+  
+.letra.errada {
+    background-color: red;
+}
