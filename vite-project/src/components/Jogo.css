@@ -18,6 +18,9 @@
     max-height: 335px;
     height: 100%;
     margin-top: 10px;
+    display: flex;
+    align-items: end;
+    padding-bottom: 25px;
 }
 
 .teclado{

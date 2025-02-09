@@ -1,0 +1,16 @@
+.reset {
+    width: 200px;
+    border: 3px solid rgb(65, 65, 65);
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+.reset:hover {
+    border: 3px solid gray;
+    background-color: rgb(65, 65, 65);
+}
