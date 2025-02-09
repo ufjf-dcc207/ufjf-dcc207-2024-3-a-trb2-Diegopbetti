@@ -17,8 +17,11 @@ function Jogo({ palavraSecreta }: JogoProps) {
   const [currentGuess, setCurrentGuess] = useState('');
   const [currentRow, setCurrentRow] = useState(0);
   const [confirmedGuesses, setConfirmedGuesses] = useState<boolean[]>(Array(MAX_ATTEMPTS).fill(false));
+  const [gameOver, setGameOver] = useState(false);
+  const [message, setMessage] = useState('');
 
   const handleKeyPress = (key: string) => {
+    if (gameOver) return; 
     key = key.toUpperCase();
 
     if (key === 'BACKSPACE' || key === 'ESCAPE' || key === '🔙') {
@@ -43,6 +46,14 @@ function Jogo({ palavraSecreta }: JogoProps) {
           return newConfirmed;
         });
 
+        if (currentGuess === palavraSecreta) {
+          setGameOver(true);
+          setMessage('🎉 Parabéns! Você acertou! 🎉');
+        } else if (currentRow + 1 === MAX_ATTEMPTS) {
+          setGameOver(true);
+          setMessage(`Fim de jogo! A palavra era ${palavraSecreta}.`);
+        }
+
         setCurrentGuess('');
         setCurrentRow((prev) => prev + 1);
       }
@@ -59,22 +70,23 @@ function Jogo({ palavraSecreta }: JogoProps) {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentGuess, currentRow]);
+  }, [currentGuess, currentRow, gameOver]);
 
   return (
     <div className='container'>
       <h1 className='titulo'>Termo</h1>
       <div className='jogo'>
         <div>
-            {guesses.map((guess, index) => (
+          {guesses.map((guess, index) => (
             <Palavra key={index} word={index === currentRow ? currentGuess : guess} 
-                secretWord={palavraSecreta} 
-                revealed={confirmedGuesses[index]} 
+              secretWord={palavraSecreta} 
+              revealed={confirmedGuesses[index]} 
             />
-            ))}
+          ))}
         </div>
         <div>
-            <Botao />
+          {message && <p className="mensagem">{message}</p>}
+          <Botao />
         </div>
       </div>
       <div className='teclado'>
