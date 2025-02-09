@@ -48,7 +48,7 @@ function Jogo({ palavraSecreta }: JogoProps) {
 
         if (currentGuess === palavraSecreta) {
           setGameOver(true);
-          setMessage('🎉 Parabéns! Você acertou! 🎉');
+          setMessage('Parabéns! Você acertou! 🎉🎉🎉🎉🎉');
         } else if (currentRow + 1 === MAX_ATTEMPTS) {
           setGameOver(true);
           setMessage(`Fim de jogo! A palavra era ${palavraSecreta}.`);
