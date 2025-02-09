@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './Jogo.css';
 import Palavra from './Palavra';
 import Teclas from './Teclas';
+import Botao from './Botao';
 import { palavrasValidas } from '../PalavrasInfo';
 
 const MAX_ATTEMPTS = 6;
@@ -73,6 +74,7 @@ function Jogo({ palavraSecreta }: JogoProps) {
       </div>
       <div className='teclado'>
         <Teclas onKeyPress={handleKeyPress} />
+        <Botao />
       </div>
     </div>
   );
