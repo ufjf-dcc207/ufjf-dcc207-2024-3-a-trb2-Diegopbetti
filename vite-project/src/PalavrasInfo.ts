@@ -16,7 +16,7 @@ export const palavrasValidas = [
     "JOVEM", "LITRO", "MACIA", "NOMES", "OASIS", "PALMA", "ROCHA", "SALVA", "TOQUE", "VOZES",
     "ULTRA", "ZONAS", "CISNE", "POMAR", "RAIOS", "LENDA", "BANDA", "FURIA", "VINHA", "FILHO",
     "POEMA", "BOTAO", "TRAGO", "TRAPO", "PODIO", "BIOMA", "PIADA", "LONGO", "GRUPO", "BOLSA",
-    "SAUDE", "SOGRO", "BALSA", "FALSA", "BONUS", "JUNHO"
+    "SAUDE", "SOGRO", "BALSA", "FALSA", "BONUS", "JUNHO", "BLUSA"
   ];    
   
   export const palavraCorreta = palavrasValidas[Math.floor(Math.random() * palavrasValidas.length)];

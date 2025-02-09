@@ -19,6 +19,7 @@ function Jogo({ palavraSecreta }: JogoProps) {
   const [confirmedGuesses, setConfirmedGuesses] = useState<boolean[]>(Array(MAX_ATTEMPTS).fill(false));
   const [gameOver, setGameOver] = useState(false);
   const [message, setMessage] = useState('');
+  const [lost, setLost] = useState(false);
 
   const handleKeyPress = (key: string) => {
     if (gameOver) return; 
@@ -51,7 +52,8 @@ function Jogo({ palavraSecreta }: JogoProps) {
           setMessage('Parabéns! Você acertou! 🎉🎉🎉🎉🎉');
         } else if (currentRow + 1 === MAX_ATTEMPTS) {
           setGameOver(true);
-          setMessage(`Fim de jogo! A palavra era ${palavraSecreta}.`);
+          setLost(true);
+          setMessage(`Fim de jogo! A palavra era:`);
         }
 
         setCurrentGuess('');
@@ -84,8 +86,8 @@ function Jogo({ palavraSecreta }: JogoProps) {
             />
           ))}
         </div>
-        <div>
-          {message && <p className="mensagem">{message}</p>}
+        <div className="game-info">
+          {message && <p className="mensagem">{message} {lost && <p className="palavra-secreta">{palavraSecreta}</p>}</p>}        
           <Botao />
         </div>
       </div>
