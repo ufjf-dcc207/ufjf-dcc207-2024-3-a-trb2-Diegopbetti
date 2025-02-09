@@ -65,16 +65,20 @@ function Jogo({ palavraSecreta }: JogoProps) {
     <div className='container'>
       <h1 className='titulo'>Termo</h1>
       <div className='jogo'>
-        {guesses.map((guess, index) => (
-          <Palavra key={index} word={index === currentRow ? currentGuess : guess} 
-            secretWord={palavraSecreta} 
-            revealed={confirmedGuesses[index]} 
-          />
-        ))}
+        <div>
+            {guesses.map((guess, index) => (
+            <Palavra key={index} word={index === currentRow ? currentGuess : guess} 
+                secretWord={palavraSecreta} 
+                revealed={confirmedGuesses[index]} 
+            />
+            ))}
+        </div>
+        <div>
+            <Botao />
+        </div>
       </div>
       <div className='teclado'>
         <Teclas onKeyPress={handleKeyPress} />
-        <Botao />
       </div>
     </div>
   );
