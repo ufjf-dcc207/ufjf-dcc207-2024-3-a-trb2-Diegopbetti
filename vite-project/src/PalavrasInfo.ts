@@ -1,5 +1,5 @@
 export const palavrasValidas = [
-    "CASAl", "FLORE", "PRAIA", "LIVRO", "MELAO", "FELIZ", "SONHO", "GRATO", "MUNDO", "PLANO",
+    "CASAL", "FLORE", "PRAIA", "LIVRO", "MELAO", "FELIZ", "SONHO", "GRATO", "MUNDO", "PLANO",
     "BRAVO", "CLARO", "DENTE", "FALTA", "FUGIR", "GENRO", "HUMOR", "JUNTA", "NOTAR", "OPACO",
     "PRIMO", "BICHO", "ROSTO", "SALTO", "TONAL", "URANO", "VALOR", "VIRAR", "SORGO", "TURNO",
     "COVIL", "BROTA", "DIGNO", "EIXOS", "GOSTO", "HASTE", "INFRA", "JOVEM", "KARMA", "LARGO",
@@ -16,8 +16,11 @@ export const palavrasValidas = [
     "JOVEM", "LITRO", "MACIA", "NOMES", "OASIS", "PALMA", "ROCHA", "SALVA", "TOQUE", "VOZES",
     "ULTRA", "ZONAS", "CISNE", "POMAR", "RAIOS", "LENDA", "BANDA", "FURIA", "VINHA", "FILHO",
     "POEMA", "BOTAO", "TRAGO", "TRAPO", "PODIO", "BIOMA", "PIADA", "LONGO", "GRUPO", "BOLSA",
-    "SAUDE", "SOGRO", "BALSA", "FALSA", "BONUS", "JUNHO", "BLUSA"
-  ];    
-  
-  export const palavraCorreta = palavrasValidas[Math.floor(Math.random() * palavrasValidas.length)];
-  
+    "SAUDE", "SOGRO", "BALSA", "FALSA", "BONUS", "JUNHO", "BLUSA", "BOLSO", "SOGRA", "BARRA",
+    "BOMBA", "VENCE", "SORRO", "TUBOS", "CUBOS", "COSTA", "FUMAR", "LUZES", "TREVO", "CAMPO",
+    "GRITO", "PODER", "FORTE", "FUNGO", "JULGA", "SOLTO", "CARRO", "TERMO", "FAROL", "FOCAL",
+    "FERRO", "BOQUE", "TOSCO", "ROTOR", "TRAGO", "PEDRA", "MURAL", "DENTE", "CINTO", "BOSSA",
+    "XAMPU", "TANGO", "AVIAO", "TRONO", "MORRO", "JURAR", "FEIRA", "BOLAO", "DESTA", "BEIRA",
+];
+
+export const palavraCorreta = palavrasValidas[Math.floor(Math.random() * palavrasValidas.length)];
