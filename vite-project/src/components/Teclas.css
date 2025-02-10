@@ -18,3 +18,16 @@
     align-items: center;
     font-size: 30px;
 }
+
+@media(max-width: 768px){
+    .fileira{
+        margin: 0;
+        grid-template-columns: repeat(10, 30px);
+    }
+
+    .teclas{
+        height: 30px;
+        font-size: 15px;
+        width: 30px;
+    }
+}

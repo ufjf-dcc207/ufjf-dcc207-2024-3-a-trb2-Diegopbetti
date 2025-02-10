@@ -30,3 +30,18 @@
 .letra.errada {
     background-color: red;
 }
+
+@media(max-width : 768px){
+    .linha{
+        grid-template-columns: repeat(5, 30px);
+        width: 180px;
+        height: 35px;
+        margin: 0;
+    }
+
+    .letra{
+        height: 30px;
+        font-size: 15px;
+        width: 30px;
+    }
+}

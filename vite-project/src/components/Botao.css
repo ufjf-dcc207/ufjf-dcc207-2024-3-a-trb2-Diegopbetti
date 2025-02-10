@@ -14,3 +14,11 @@
     border: 3px solid gray;
     background-color: rgb(65, 65, 65);
 }
+
+@media(max-width: 768px){
+    .reset{
+        padding: 5px;
+        font-size: 15px;
+        width: 177px;
+    }
+}

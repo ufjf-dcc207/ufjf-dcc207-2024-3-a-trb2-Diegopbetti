@@ -42,3 +42,21 @@
     text-transform: uppercase;
     margin-top: 10px;
   }
+
+@media(max-width: 768px){
+    .jogo{
+        flex-direction: column;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 270px;
+        padding: 10;
+    }
+
+    .palavra-secreta {
+        font-size: 18px;
+    }
+
+    .mensagem {
+        font-size: 15px;
+    }
+}
