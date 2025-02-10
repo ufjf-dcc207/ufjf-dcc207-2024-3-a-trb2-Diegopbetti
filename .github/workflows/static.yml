@@ -35,17 +35,20 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+          cache-dependency-path: vite-project/package-lock.json  # Indica onde está o package-lock.json
       - name: Install dependencies
         run: npm ci
+        working-directory: vite-project  # Define o diretório correto
       - name: Build
         run: npm run build
+        working-directory: vite-project  # Executa o build dentro da pasta correta
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist folder
-          path: './dist'
+          path: 'vite-project/dist'  # Define o caminho do build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
